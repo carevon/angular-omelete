@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudService } from '../../crud.service';
 
 @Component({
   selector: 'app-list',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+  users: any; //variavel global de usuários
+  constructor( private crudService: CrudService ) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  async ngOnInit() {
+    // service de listagem de usuários
+    var users = await this.crudService.list()
+    this.users = users['data'];
   }
 
 }
