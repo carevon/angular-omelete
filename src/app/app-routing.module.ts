@@ -7,7 +7,7 @@ const routes: Routes = [
     // Rota dinamica /:
     path: 'user/:id', component: UserComponent, //:id dinamico
   },
-  {path: '', component: ListComponent},
+  {path: 'list', component: ListComponent},
   {path:'user/new', component: UserComponent}
 ];
 

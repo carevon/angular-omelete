@@ -46,7 +46,9 @@ export class UserComponent implements OnInit {
 
   async save(){
     var savedUser = await this.crudService.update(this.userForm.value)
-    console.log(savedUser)
+    alert(`Usuário ${savedUser['first_name']} foi atualizado com sucesso!`)
+    this.router.navigate(['/list'])
+    //console.log(savedUser)
   }
 
 }
