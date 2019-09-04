@@ -1,3 +1,20 @@
-<p>
-  user works!
-</p>
+<div class="container">
+  <h1>Editar usuário</h1>
+  <form [formGroup]="userForm" class="" action="" method="post">
+    <!-- first_name -->
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input type="text" name="name" placeholder="Name" formControlName="first_name">
+    </div>
+    <!-- last_name  -->
+    <div class="form-group">
+      <label for="last_name">Sobrenome</label>
+      <input type="text" name="last_name" placeholder="Sobrenome" formControlName="last_name">
+    </div>
+    <!-- avatar -->
+    <div class="form-group" *ngIf="userForm && userForm.value && userForm.value.avatar">
+      <!-- IF para checar se existe uma imagem para o usuario, condições para não quebrar a pagina na verificação-->
+      <img [src]="userForm.value.avatar" alt="Imagem avatar do usuário">
+    </div>
+  </form>
+</div>

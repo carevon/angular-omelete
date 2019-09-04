@@ -12,4 +12,9 @@ export class CrudService {
   async list(){
     return await this.http.get(this.url).toPromise();
   }
+
+  // Capturar um usuário pelo id
+  async getSingleOne(id:string){
+    return await this.http.get(`${this.url}/${id}`).toPromise();
+  }
 }

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListComponent, UserComponent } from './components/index';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
@@ -17,7 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule // Módulo utilizado para fazer chamdas HTTP/HTTPS
+    HttpClientModule, // Módulo utilizado para fazer chamdas HTTP/HTTPS
+    FormsModule, // para fazer formulários
+    ReactiveFormsModule // para fazer formulários
   ],
   providers: [],
   bootstrap: [AppComponent]

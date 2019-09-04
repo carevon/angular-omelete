@@ -9,7 +9,7 @@
         <h1>Lista de usuários</h1>
         <ul class="list-group">
           <li *ngFor="let user of users" class="list-group-item d-flex justify-content-betweem">
-              <a>{{user.first_name}}</a>
+              <a [href]="'/user/'+user.id">{{user.first_name}}</a>
               <span class="badge"><img [src]="user.avatar" alt="Imagem fornecida pela API"></span>
           </li>
         </ul>
