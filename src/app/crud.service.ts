@@ -17,4 +17,9 @@ export class CrudService {
   async getSingleOne(id:string){
     return await this.http.get(`${this.url}/${id}`).toPromise();
   }
+
+  // Atualizar o usuário
+  async update(user:object){
+    return await this.http.put(`${this.url}/${user['id']}`, user).toPromise();
+  }
 }

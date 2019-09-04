@@ -44,4 +44,9 @@ export class UserComponent implements OnInit {
     }
   }
 
+  async save(){
+    var savedUser = await this.crudService.update(this.userForm.value)
+    console.log(savedUser)
+  }
+
 }
